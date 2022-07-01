@@ -8,11 +8,11 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier": "npx prettier --check --cache server/**/*.js",
-    "lint": "npx eslint --cache server/**/*.js",
-    "format": "npx prettier --check --write --cache server/**/*.js && npx eslint --fix --cache server/**/*.js",
-    "dev": "npm run format && nodemon index",
-    "start": "npm run format && node index"
+    "prettier": "prettier --check --cache server/**/*.js",
+    "lint": "eslint --cache server/**/*.js",
+    "format": "prettier --check --write --cache server/**/*.js && eslint --fix --cache server/**/*.js",
+    "dev": "yarn format && nodemon index",
+    "start": "node index"
   },
   "repository": {
     "type": "git",
