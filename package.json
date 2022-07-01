@@ -11,8 +11,8 @@
     "prettier": "npx prettier --check --cache src/**/*.js",
     "lint": "npx eslint --cache src/**/*.js",
     "format": "npx prettier --check --write --cache src/**/*.js && npx eslint --fix --cache src/**/*.js",
-    "dev": "npm run lint && nodemon index",
-    "start": "npm run lint && node index"
+    "dev": "npm run lint && nodemon src/app",
+    "start": "npm run lint && node src/app"
   },
   "repository": {
     "type": "git",
@@ -31,16 +31,14 @@
     "express": "^4.18.1",
     "joi": "^17.6.0",
     "mongoose": "^6.4.1",
-    "morgan": "^1.10.0",
-    "uuid": "^8.3.2"
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "@types/node": "^18.0.0",
     "eslint": "^8.18.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-node": "^11.1.0",
-    "jest": "^28.1.2",
     "nodemon": "^2.0.18",
     "prettier": "^2.7.1"
   }
