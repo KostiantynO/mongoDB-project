@@ -2,17 +2,17 @@
   "name": "mongodb-project",
   "version": "1.0.0",
   "description": "testing mongoDB features with backend server",
-  "main": "./src/app.js",
+  "main": "index.js",
   "engines": {
     "node": ">=14.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier": "npx prettier --check --cache src/**/*.js",
-    "lint": "npx eslint --cache src/**/*.js",
-    "format": "npx prettier --check --write --cache src/**/*.js && npx eslint --fix --cache src/**/*.js",
-    "dev": "npm run format && nodemon ./src/app.js",
-    "start": "npm run format && node ./src/app.js"
+    "prettier": "npx prettier --check --cache server/**/*.js",
+    "lint": "npx eslint --cache server/**/*.js",
+    "format": "npx prettier --check --write --cache server/**/*.js && npx eslint --fix --cache server/**/*.js",
+    "dev": "npm run format && nodemon index",
+    "start": "npm run format && node index"
   },
   "repository": {
     "type": "git",
@@ -37,8 +37,6 @@
     "eslint": "^8.18.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-promise": "^6.0.0",
     "nodemon": "^2.0.18",
     "prettier": "^2.7.1"
   }

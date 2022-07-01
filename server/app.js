@@ -11,28 +11,41 @@ const {
 require('dotenv').config();
 const {DB_HOST, PORT} = process.env;
 
-// server app
 const app = express();
 
-// middleware
 app.use(cors());
 app.use(express.json());
 app.use(logger('dev'));
 
-// router
+app.get('/', (req, res) => {
+  res.send(
+    `<!DOCTYPE html>
+      <html>
+        <head>
+          <title>OnlineShop<title>
+        </head>
+        <body>
+          <a href="https://ko-mongodb-project.herokuapp.com/api/v1/products" rel="noopener noreferrer">Show products</a>
+        <body>
+      </html>
+    `,
+  );
+});
+
 app.use(products, productsRouter);
 
-// connect to mongoDB with driver lib
-mongoose
-  .connect(DB_HOST)
-  .then(() => {
+const main = async () => {
+  try {
+    await mongoose.connect(DB_HOST);
     console.log('MongoDB connected');
 
-    // start server
     app.listen(PORT);
-    return console.log(`Endpoint: http://localhost:${PORT}${products}`);
-  })
-  .catch((error) => {
+
+    console.log(`Endpoint: http://localhost:${PORT}${products}`);
+  } catch (error) {
     console.log(error.message);
     process.exitCode = 1;
-  });
+  }
+};
+
+module.exports = main;
