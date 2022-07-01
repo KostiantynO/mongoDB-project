@@ -1,20 +1,15 @@
 {
   "root": true,
-  "env": {
-    "commonjs": true,
-    "es2021": true,
-    "node": true
-  },
+  "env": {"commonjs": true, "es2021": true, "node": true},
   "extends": [
     "eslint:recommended",
     "plugin:node/recommended",
     "google",
     "prettier"
   ],
-  "parserOptions": {
-    "ecmaVersion": "latest"
-  },
+  "parserOptions": {"ecmaVersion": "latest"},
   "rules": {
-    "indent": ["error", 2, {"SwitchCase": 1, "MemberExpression": 1}]
+    "indent": ["error", 2, {"SwitchCase": 1, "MemberExpression": 1}],
+    "new-cap": ["error", {"capIsNewExceptions": ["Schema", "Router"]}]
   }
 }
