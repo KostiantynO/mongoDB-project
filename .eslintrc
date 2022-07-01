@@ -5,9 +5,11 @@
     "eslint:recommended",
     "plugin:node/recommended",
     "plugin:import/recommended",
+    "plugin:promise/recommended",
     "google",
     "prettier"
   ],
+  "plugins": ["node", "import", "promise"],
   "parserOptions": {"ecmaVersion": "latest"},
   "rules": {
     "indent": ["error", 2, {"SwitchCase": 1, "MemberExpression": 1}],

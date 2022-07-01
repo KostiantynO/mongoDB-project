@@ -1,4 +1,4 @@
-// mongoDB - database, mongoose -  driver
+// mongoDB - database, mongoose - driver
 const express = require('express');
 const cors = require('cors');
 const logger = require('morgan');
@@ -30,7 +30,7 @@ mongoose
 
     // start server
     app.listen(PORT);
-    console.log(`Endpoint: http://localhost:${PORT}${products}`);
+    return console.log(`Endpoint: http://localhost:${PORT}${products}`);
   })
   .catch((error) => {
     console.log(error.message);
